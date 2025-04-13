@@ -1,69 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f2f6f8;
-  color: #333;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #dff1ff, #fef6ff);
+  color: #2d2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .landing {
   max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  text-align: center;
+  width: 90%;
+  background: #ffffffcc;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1.2s ease;
 }
 
-.header .logo {
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
   font-size: 2rem;
+  font-weight: 600;
+  color: #ff9d4d;
 }
 
 .hero h2 {
   font-size: 1.8rem;
-  margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 .hero p {
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.lead-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .lead-form input {
-  padding: 10px;
-  font-size: 1rem;
-  width: 60%;
-  max-width: 300px;
-  margin-right: 10px;
-  border-radius: 6px;
+  padding: 12px;
+  border-radius: 8px;
   border: 1px solid #ccc;
+  width: 250px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 1rem;
 }
 
 .lead-form button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #6fa8dc;
-  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: #6ea8fe;
   color: white;
-  border-radius: 6px;
+  font-weight: bold;
+  border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .lead-form button:hover {
-  background-color: #3d85c6;
+  background-color: #4b91f1;
+}
+
+.benefits, .bonus {
+  margin-bottom: 2rem;
+}
+
+.benefits h3,
+.bonus h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 1rem;
 }
 
 .benefits ul {
   list-style: none;
   padding: 0;
+  font-size: 1.05rem;
 }
 
 .benefits li {
-  margin: 10px 0;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.bonus {
-  margin-top: 40px;
+.bonus p {
+  font-size: 1.05rem;
+  margin: 0.5rem 0;
 }
 
 .footer {
-  margin-top: 60px;
-  font-size: 0.9rem;
-  color: #888;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 1rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .lead-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lead-form input,
+  .lead-form button {
+    width: 100%;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
 }
